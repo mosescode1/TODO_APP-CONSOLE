@@ -40,3 +40,7 @@ class Todo:
         object["updated_at"] = object["updated_at"].isoformat()
         #object[Todo.task_number] = self.create_todo() 
         return object
+#    @staticmethod
+#    def strike(text):
+#        text =  ''.join([u'\u0336{}'.format(c) for c in text])
+#        print(text)
