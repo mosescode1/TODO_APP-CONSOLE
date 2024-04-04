@@ -1,44 +1,18 @@
 {
-    "Todo.1e29b7e9-36f6-48c2-b7eb-bb580c13fa5e": {
-        "id": "1e29b7e9-36f6-48c2-b7eb-bb580c13fa5e",
-        "created_at": "2024-04-02T13:56:40.777842",
-        "updated_at": "2024-04-02T12:56:40.777899",
-        "todo_name": "name",
-        "text": "Texted"
+    "Todo.47e9ae86-58ee-450c-8a04-8636ad6b6530": {
+        "id": "47e9ae86-58ee-450c-8a04-8636ad6b6530",
+        "created_at": "2024-04-04T23:03:45.900340",
+        "updated_at": "2024-04-04T22:03:45.900395",
+        "task": {
+            "EATING": "BY 9 AM"
+        }
     },
-    "Todo.5d2e7aed-6ce7-445d-bc26-200f2d0e96a6": {
-        "id": "5d2e7aed-6ce7-445d-bc26-200f2d0e96a6",
-        "created_at": "2024-04-02T14:01:07.296807",
-        "updated_at": "2024-04-02T13:01:07.296900",
-        "todo_name": "name",
-        "text": "Texted"
-    },
-    "Todo.d143cb46-09b8-4174-be81-887e63a684f2": {
-        "id": "d143cb46-09b8-4174-be81-887e63a684f2",
-        "created_at": "2024-04-02T14:01:19.921437",
-        "updated_at": "2024-04-02T13:01:19.921497",
-        "todo_name": "name",
-        "text": "Texted"
-    },
-    "Todo.1d987031-1965-48c4-b949-54f16e988879": {
-        "id": "1d987031-1965-48c4-b949-54f16e988879",
-        "created_at": "2024-04-02T22:10:03.398968",
-        "updated_at": "2024-04-02T21:10:03.398989",
-        "todo_name": "Todo",
-        "text": "Eating"
-    },
-    "Todo.3286f3f8-2b5a-45b2-a2d6-625b35486ccd": {
-        "id": "3286f3f8-2b5a-45b2-a2d6-625b35486ccd",
-        "created_at": "2024-04-02T22:12:41.556935",
-        "updated_at": "2024-04-02T21:12:41.556960",
-        "todo_name": "Todo",
-        "text": "Eating"
-    },
-    "Todo.8be24cfb-d217-497e-884b-33a4c5cd8401": {
-        "id": "8be24cfb-d217-497e-884b-33a4c5cd8401",
-        "created_at": "2024-04-02T22:17:37.988741",
-        "updated_at": "2024-04-02T21:17:37.988778",
-        "todo_name": "Todo",
-        "text": "Winning"
+    "Todo.8dc14e4a-59a0-4839-b3b3-4e1b95c5d416": {
+        "id": "8dc14e4a-59a0-4839-b3b3-4e1b95c5d416",
+        "created_at": "2024-04-04T23:03:50.094296",
+        "updated_at": "2024-04-04T22:03:50.094349",
+        "task": {
+            "EATING": "BY 9 AM"
+        }
     }
 }
