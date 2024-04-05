@@ -73,11 +73,23 @@ class Todocommand(Cmd):
                     # print(value.to_dict())
 
     def do_delete(self, line):
-        pass
-
+        if not line:
+            print("USAGE: <class_name> <I_D> <to_do_name> Missing")
+            return
+        var = line.split()
+        if len(var) < 2:
+            print("USAGE: <I_D> <to_do_name> Missing")
+            return
+        # if len(var) < 3:
+        #     print("USAGE: <to_do_name> Missing")
+        #     return
+        key_id = f"{var[0]}.{var[1]}"  # string_format f"{}"
+        del storage.all()[key_id]
+        storage.save()
+        
     def do_undone(self, line):
         pass
-
+    
     def do_q(self, line):
         sys.exit(0)
 
