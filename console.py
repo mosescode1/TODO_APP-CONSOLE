@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from cmd import Cmd
 import sys
+import shlex
 from models.todo_model import Todo
 from models import storage  # storage is instance of Filestorage
 
@@ -14,12 +15,13 @@ class Todocommand(Cmd):
         if not line:
             print("USAGE: <create> <class_name> <TASK>")
             return
-        var = line.split()
+        var = shlex.split(line)
+
         if len(var) < 2:
             print("USAGE: <create> <class_name> <TASK>")
             return
         todo = Todo()
-        todo.create_todo(var[0], var[1])
+        todo.create_task(var[0], var[1])
         todo.save()
 
     def do_EOF(self, line):
@@ -45,9 +47,6 @@ class Todocommand(Cmd):
     def do_all(self):
         pass
 
-    def do_completed(self, line):
-        pass
-
     def do_mark(self, line):
         if not line:
             print("USAGE: <class_name> <I_D> <to_do_name> Missing")
@@ -68,7 +67,7 @@ class Todocommand(Cmd):
                     print(keys, items)
                     keys = ''.join([u'\u0336{}'.format(c) for c in keys])
                     items = ''.join([u'\u0336{}'.format(c) for c in items])
-                    print(f"The todo {keys}==>{items} has been completed")
+                    print(f"The todo {keys} {items} has been completed")
                     # value["task"] = dict([items = strike(items) for items, values in value["task"])
                     # print(value.to_dict())
 
