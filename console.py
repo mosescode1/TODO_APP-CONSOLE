@@ -65,10 +65,15 @@ class Todocommand(Cmd):
                 var = value.to_dict()
                 # print(var)
                 for keys, items in var["task"].items():
-                    print(keys, items)
-                    keys = ''.join([u'\u0336{}'.format(c) for c in keys])
-                    items = ''.join([u'\u0336{}'.format(c) for c in items])
-                    print(f"The todo {keys} {items} has been completed")
+                    if isinstance(key, str) and isinstance(items, str):
+                        print(keys, items)
+                        var["task"] = ''.join([u'\u0336{}'.format(c) for c in keys])
+                        items = ''.join([u'\u0336{}'.format(c) for c in items])
+                        if key == "completed":
+                            Todo.completed()
+                            storage.save()
+                        print(f"The todo {keys} {items} has been completed")
+                    
                     # value["task"] = dict([items = strike(items) for items, values in value["task"])
                     # print(value.to_dict())
 
@@ -84,7 +89,7 @@ class Todocommand(Cmd):
         #     print("USAGE: <to_do_name> Missing")
         #     return
         key_id = f"{var[0]}.{var[1]}"  # string_format f"{}"
-        del storage.all()[key_id]
+        storage.all().pop(key_id)
         storage.save()
         
     def do_undone(self, line):

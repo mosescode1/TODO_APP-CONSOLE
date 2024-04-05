@@ -28,9 +28,11 @@ class Todo:
     def create_task(self, task_title, task_description):
         """ """
         self.task[task_title] = task_description  # No need to put self, to parameters, as they are outside vars
+        self.task["completed"] = False
 
     def completed(self):
         self.__dict__["completed_at"] = datetime.utcnow()
+        self.task["completed"] = True
 
     def to_dict(self):
         object = self.__dict__.copy()
