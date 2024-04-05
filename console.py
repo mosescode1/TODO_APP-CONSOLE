@@ -44,9 +44,10 @@ class Todocommand(Cmd):
             if key == key_id:
                 print(value.to_dict())
 
-    def do_all(self):
-        pass
-
+    def do_all(self, line):
+        """ """
+        for key, value in storage.all().items():
+            print(key, value.to_dict())
     def do_mark(self, line):
         if not line:
             print("USAGE: <class_name> <I_D> <to_do_name> Missing")
